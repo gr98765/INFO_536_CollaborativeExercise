@@ -67,5 +67,3 @@ ggplot(fatalities_per_region, aes(area = total_fatalities, fill = total_fataliti
   scale_fill_gradient(low = "lightblue", high = "steelblue") +
   theme_minimal() +
   labs(title = "Total Fatalities per Region (Treemap)")
-
-
