@@ -1,3 +1,6 @@
+
+
+
 # Global Terrorism Database Collaborative Analysis
 
 # Calculate total fatalities per region
