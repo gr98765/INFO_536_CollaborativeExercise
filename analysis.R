@@ -1,18 +1,12 @@
+
+
+
 # Global Terrorism Database Collaborative Analysis
 
-# Load necessary libraries
-library(dplyr)
-library(ggplot2)
+# Calculate total fatalities per region
+fatalities_per_region <- cleaned_data %>%
+  group_by(country_txt) %>%
+  summarise(total_fatalities = sum(nkill))
 
-# Load the dataset
-gtd_data <- read.csv("C:/Users/gaur/INFO-536/globalterrorismdb_0718dist.csv", stringsAsFactors = FALSE)
-
-
-#select 'country_txt' and 'n_kill' columns, drops rows which consist NA
-
-cleaned_data <- gtd_data %>%
-  select(country_txt, nkill) %>%
-na.omit()
-
-# Basic data exploration
-glimpse(cleaned_data)
+# View the results
+glimpse(fatalities_per_region)
