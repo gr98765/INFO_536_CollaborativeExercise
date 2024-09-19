@@ -17,3 +17,13 @@ na.omit()
 
 # Data exploration by region
 glimpse(cleaned_data)
+
+#Role 2 : Sreeharsha
+# Group by region (or country) and calculate total fatalities
+fatalities_per_region <- cleaned_data %>%
+  group_by(country_txt) %>%
+  summarise(total_fatalities = sum(nkill, na.rm = TRUE))
+
+# View the data for graphing
+glimpse(fatalities_per_region)
+
